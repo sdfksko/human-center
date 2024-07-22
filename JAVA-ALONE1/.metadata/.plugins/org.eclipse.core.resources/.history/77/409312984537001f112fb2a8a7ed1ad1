@@ -1,0 +1,14 @@
+package practice1;
+
+import java.util.*;
+
+public class Practice01 {
+	public static void main(String[] args) {
+		System.out.println(solution("나비", 5));
+	}
+	public int solution(int a, int b) {
+        int answer = 0;
+        return answer;
+    }
+	    
+}

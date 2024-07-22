@@ -1,0 +1,14 @@
+package practice1;
+
+import java.util.*;
+
+public class Practice01 {
+	public static void main(String[] args) {
+		System.out.println(solution(new int[5]));
+	}
+	 public int solution(String A, String B) {
+	        int answer = 0;
+	        return answer;
+	    }
+	    
+}
