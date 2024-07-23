@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "java.sql.Connection" %>
+<%@ page import = "java.sql.DriverManager" %>
+<%@ page import = "java.sql.PreparedStatement" %>
+<%@ page import = "java.sql.ResultSet" %>
+<%@ page import = "java.sql.SQLException" %>
+<%@ page import = "com.starbucks.utils.DBManager" %>
+<%
+	String searchKeyword = request.getParameter("search");	
+%>    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,167 +49,97 @@
     <!-- swiper 6.8.4 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js" integrity="sha512-BABFxitBmYt44N6n1NIJkGOsNaVaCs/GpaJwDktrfkWIBFnMD6p5l9m+Kc/4SLJSJ4mYf+cstX98NYrsG/M9ag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css" integrity="sha512-aMup4I6BUl0dG4IBb0/f32270a5XP7H1xplAJ80uVKP6ejYCgZWcBudljdsointfHxn5o302Jbnq1FXsBaMuoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script defer src="./js/notice.js"></script>
 </head>
 <body>
 	<%@ include file="./header.jsp" %>
 	<%	
 		//System.out.println("공지사항 목록페이지 상단");
 	%>
+
     <!-- notice top -->
     <section class="">
         <div class="inner sub_tit_wrap">
             <div class="sub_tit_inner">
                 <h2><img src="https://www.starbucks.co.kr/common/img/whatsnew/notice_tit.jpg" alt="공지사항"></h2>
                 <ul class="smap">
-                    <li>
-                        <a href="/starbucks-hompage/">
-                            <img src="https://image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로">
-                        </a>
-                    </li>
-                    <li>
-                        <img class="arrow" src="https://image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하이메뉴">
-                    </li>
-                    <li><a href="#">WHAT'S NEW</a></li>
-                    <li>
-                        <img class="arrow" src="https://image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하이메뉴">
-                    </li>
-                    <li><a href="#">공지사항</a></li>
+                	<li>
+                		<a href="/starbucks-homepage1">
+                			<img src="https://image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로">
+               			</a>
+               		</li>
+               		<li>
+               			<img class="arrow" src="https://image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴">
+               		</li>
+               		<li><a href="#">WHAT'S NEW</a></li>
+               		<li>
+               			<img class="arrow" src="https://image.istarbucks.co.kr/common/img/common/icon_arrow.png" alt="하위메뉴">
+               		</li>
+               		<li><a href="#">공지사항</a></li>
                 </ul>
             </div>
             <div class="news_sch_wrap">
             	<div class="sch_items">
             		<input type="text" name="sch_bar" id="sch_bar" placeholder="검색어를 입력해 주세요." />
-            		<a href="javascript:void(0);" class="new-board-search-btn">검색</a>
+           			<a href="javascript: searchNotice();" class="new-board-search-btn">검색</a>
             	</div>
             </div>
         </div>
     </section>
-	
+
 	<!-- notice list -->
-	<section>
-		<div class="inner container">
-			<div class="header">
-				<p>NO</p>
-				<p>제목</p>
-				<div class="header_item">
-					<p>날짜</p>
-					<p>조회수</p>
-				</div>
+	<section style="margin-bottom: 180px;">
+		<div class="inner notice__list">
+			<div class="notice_header">
+				<div class="notice_no">NO</div>
+				<div class="notice_title">제목</div>
+				<div class="notice_regdate">조회수</div>
+				<div class="notice_hit">날짜</div>
 			</div>
-			<div class="items">
-				<div class="items1">
-					<p>535</p>
-					<a href="#">시스템 개선 및 서비스 점검 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-07-22</p>
-					<p>239</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>534</p>
-					<a href="#">스타벅스 카드 이용약관 일부 정정 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-07-19</p>
-					<p>3027</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>533</p>
-					<a href="#">시스템 개선 및 서비스 점검 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-07-15</p>
-					<p>1329</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>532</p>
-					<a href="#">스타벅스 카드 이용약관 개정 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-07-15</p>
-					<p>2235</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>531</p>
-					<a href="#">시스템 개선 및 서비스 점검 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-07-09</p>
-					<p>3484</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>530</p>
-					<a href="#">개인정보처리방침 개정 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-07-04</p>
-					<p>2876</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>529</p>
-					<a href="#">스타벅스 리워드 회원 에코별 혜택 조정 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-06-28</p>
-					<p>44160</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>528</p>
-					<a href="#">스타벅스 사칭(홈페이지, 문자, 이메일, 카카오톡 채팅 등) 채용 주의 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-06-26</p>
-					<p>3412</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>527</p>
-					<a href="#">시스템 개선 및 서비스 점검 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-06-25</p>
-					<p>1683</p>
-				</div>
-			</div>
-			<div class="items">
-				<div class="items1">
-					<p>526</p>
-					<a href="#">스타벅스 카드 이용약관(일부) 정정 안내</a>
-				</div>
-				<div class="items2">
-					<p>2024-06-20</p>
-					<p>3012</p>
-				</div>
-			</div>
-			<div class="select_number">
-				<a href="#">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">6</a>
-				<a href="#">7</a>
-				<a href="#">8</a>
-				<a href="#">9</a>
-				<a href="#">10</a>
-			</div>
+<!-- 공지사항 게시글 제목 리스트 -->
+<%
+	//DB접속 객체 가져오기
+	Connection conn = DBManager.getDBConnection();
+	
+	//DB조회쿼리 실행하여 DB에 있는 데이터 값 가져오기
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	try {
+		//String selectSql = "SELECT * FROM board ORDER BY seq DESC";
+		String selectSql;
+		if(searchKeyword != null & searchKeyword != "") {
+			selectSql = "SELECT * FROM board WHERE TITLE LIKE '%" 
+							+ searchKeyword + "%' ORDER BY seq DESC";
+		} else {
+			selectSql = "SELECT * FROM board ORDER BY seq DESC";
+		}
+		
+		pstmt = conn.prepareStatement(selectSql);
+		rs = pstmt.executeQuery();	// sql실행
+
+		while (rs.next()) { 
+%>			
+			<div class="notice__list__items">
+				<ul>
+					<li><%= rs.getString("SEQ") %></li>
+					<li><%= rs.getString("TITLE") %></li>
+					<li><%= rs.getInt("READ_COUNT") %></li>
+					<li><%= rs.getDate("CREATE_DATE") %></li>
+				</ul>
+			</div>				
+<%
+		}
+	} catch(SQLException se) {
+		System.out.println("게시판 조회 쿼리 실행 오류: " + se.getMessage());
+	} finally {
+		DBManager.dbClose(conn, pstmt, rs);
+	}
+%>
+	
 		</div>
 	</section>
+	
 	<%
 		//System.out.println("공지사항 목록페이지 하단");
 	%>

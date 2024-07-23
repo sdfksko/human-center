@@ -20,7 +20,7 @@ public class DBManager {
 			Class.forName("oracle.jdbc.OracleDriver");	// 오라클 접속을 위한 Driver 사전작업
 			
 				//String url = "jdbc:oracle:thin:@localhost:1521:orcl"; // 오라클 접속할 위치값 저장
-				//String url = "jdbc:oracle:thin:@1.220.247.78:1522:orcl";	// 오라클 접속할 위치값 저장
+				// String url = "jdbc:oracle:thin:@1.220.247.78:1522:orcl";	// 오라클 접속할 위치값 저장
 				String url = "jdbc:oracle:thin:@localhost:1521:orcl"; // 오라클 접속할 위치값 저장
 				String username = "boarduser1";		// 오라클 접속 계정id
 				String password = "1234";			// 오라클 접속 계정pw
@@ -37,7 +37,7 @@ public class DBManager {
 		return conn;
 	}
 	
-	public static void dbclose(Connection conn, PreparedStatement pstmt, ResultSet rs) {
+	public static void dbClose(Connection conn, PreparedStatement pstmt, ResultSet rs) {
 		// DB입출력 자원을 정리
 				try {
 					if (rs != null) {
