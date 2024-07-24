@@ -25,11 +25,11 @@
 	//DB조회쿼리 실행하여 DB에 있는 데이터 값 가져오기
 	PreparedStatement pstmt = null;
 	try {
-		
-		String selectSql = "DELETE FROM BOARD WHERE SEQ = ";
+		String selectSql = "DELETE FROM BOARD WHERE seq=?";
 		
 		pstmt = conn.prepareStatement(selectSql);
-
+		pstmt.setInt(1,)
+		
 		pstmt.executeUpdate(); // sql insert 실행
 
 	} catch(Exception e) {
