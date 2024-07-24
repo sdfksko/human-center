@@ -71,7 +71,7 @@
                 <h2><img src="https://www.starbucks.co.kr/common/img/whatsnew/notice_tit.jpg" alt="공지사항"></h2>
                 <ul class="smap">
                 	<li>
-                		<a href="/starbucks-homepage1">
+                		<a href="<%=request.getContextPath() %>">
                 			<img src="https://image.istarbucks.co.kr/common/img/common/icon_home.png" alt="홈으로">
                			</a>
                		</li>

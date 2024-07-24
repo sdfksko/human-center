@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <script defer src="./js/main.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./main.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="search-container">
+        <div class="inner">
+            <div class="left">
+                <div class="sup">
+                    <div class="item">예매율 순</div>
+                    <div class="item">메가박스 관객순</div>
+                </div>
+                <script>
+                    const searchSup = document.querySelectorAll('.search-container .item');
+                    searchSup.forEach(item=>{
+                        item.addEventListener('click',function(){
+                            searchSup.forEach(i=>i.style.border='none');
+                            this.style.borderBottom = '1px solid white';
+                        })
+                    })
+                </script>
+                <div class="sub">
+                    <div class="top-img"><img src="https://img.megabox.co.kr/SharedImg/2024/07/08/HAHzCSec2Il5sMd4kcfMonbhCiHbEu2f_316.jpg" alt=""></div>
+                    <div class="top-rank">
+                        <div class="item"><em>1</em><a href="#">데드풀과 울버린</a></div>
+                        <div class="item"><em>2</em><a href="#">파일럿</a></div>
+                        <div class="item"><em>3</em><a href="#">슈퍼배드</a></div>
+                        <div class="item"><em>4</em><a href="#">리볼버</a></div>
+                        <div class="item"><em>5</em><a href="#">명탐정 코난:100만 달러의 펜타그램</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <input type="text" placeholder="영화를 검색하세요">
+                <img src="./images/search_white.svg" alt="">
+            </div>
+        </div>
+    </div>
     <header>
         <div class="container">
             <div class="left">
@@ -22,7 +55,7 @@
                 <div class="sub">
                     <ul class="sub-title">
                         <li class="menu-img"><img src="./images/menu.svg" alt=""></li>
-                        <li><img src="./images/search.svg" alt=""></li>
+                        <li class="search-img"><img src="./images/search.svg" alt=""></li>
                         <li>
                             <div class="sup-content">영화</div>
                             <ul class="sup-list-content">
@@ -52,7 +85,7 @@
             <div class="right">
                 <div class="sup">
                     <ul class="sup-title">
-                        <li><a href="#">로그인</a></li>
+                        <li id="login"><a href="javascript:void(0)" >로그인</a></li>
                         <li><a href="#">회원가입</a></li>
                         <li><a href="#">빠른예매</a></li>
                     </ul>
@@ -85,6 +118,29 @@
                 </div>
             </div>
         </div>
+        <div class="login-background"></div>
+            <div class="login-box">
+                <div class="title">로그인 <img src="./images/close.svg" id="closeLogin"></div>
+                <div class="login-body">
+                    <div class="left">
+                        <input type="text" placeholder="아이디">
+                        <input type="password" placeholder="비밀번호">
+                        <div><label><input type="checkbox" name="" id="chk"><span>아이디 저장</span></label></div>
+                        <button>로그인</button>
+                        <div class="link">
+                            <div class="id-find">ID/PW 찾기</div>
+                            <div class="sign-up">회원가입</div>
+                            <div class="non-member">비회원 예매확인</div>
+                        </div>
+                        <div class="other-login">
+                            <div class="naver"><img src="https://www.megabox.co.kr/static/pc/images/member/ico-naver.png" alt=""></div>
+                            <div class="kakao"><img src="https://www.megabox.co.kr/static/pc/images/member/ico-kakao.png" alt=""></div>
+                            <div class="pinterest"><img src="https://www.megabox.co.kr/static/pc/images/member/ico-payco.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="right"><img src="https://mlink-cdn.netinsight.co.kr/2024/07/03/47b6a937a2126044c280e3ff9d65c51f.jpg" alt=""></div>
+                </div>
+            </div>
         <div class="menu-container">
             <div class="menu-header">SITEMAP</div>
             <div class="menu-wrapper">
@@ -200,5 +256,34 @@
         </script>
     </header>
     <div class="header-wrapper"></div>
+    <main>123456</main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="item"><a href="#">회사소개</a></div>
+                <div class="item"><a href="#">인재채용</a></div>
+                <div class="item"><a href="#">사회공헌</a></div>
+                <div class="item"><a href="#">제휴/광고/부대사업문의</a></div>
+                <div class="item"><a href="#">이용약관</a></div>
+                <div class="item"><a href="#">위치기반서비스 이용약관</a></div>
+                <div class="item"><a href="#">개인정보처리방침</a></div>
+                <div class="item"><a href="#">윤리경영</a></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-img"><img src="https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png" alt=""></div>
+                <div class="footer-bottom-text">
+                    서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어) ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr <br>
+대표자명 홍정인 · 개인정보보호책임자 강병철 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2023-서울성동-0177 <br>
+COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved
+                </div>
+                <div class="footer-bottom-sns">
+                    <a href="#"><img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-youtubeN.png" alt=""></a>
+                    <a href="#"><img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-instagramN.png" alt=""></a>
+                    <a href="#"><img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-facebookN.png" alt=""></a>
+                    <a href="#"><img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-twitterN.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>    
 </body>
 </html>
