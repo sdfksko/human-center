@@ -7,6 +7,9 @@
 <%@ page import = "com.starbucks.utils.DBManager" %>
 <%
 	String searchKeyword = request.getParameter("search");
+
+	session.setAttribute("key1", "value1");	// 세션에 key1와 value1을 저장
+	session.setAttribute("key2", "value2");	// 세션에 key2와 value2을 저장
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +73,7 @@
 				} else {
 					selectSql = "SELECT * FROM board ORDER BY seq DESC";
 				}
-				
+
 				pstmt = conn.prepareStatement(selectSql);
 				rs = pstmt.executeQuery(); // sql실행
 
@@ -79,10 +82,10 @@
 			<div class="content-items">
 				<div><%= rs.getInt("SEQ") %></div>
                 <div><%= rs.getString("TITLE") %></div>
-                <div><%= rs.getString("WRITER") %></div>
+                <div><%= rs.getString("WRITER") == null ? "" : rs.getString("WRITER") %></div>
                 <div>
-                	<button style="cursor: pointer;" onClick="location.href='/starbucks-hompage/admin_notice_update_form.jsp'">수정</button>
-                	<button style="cursor: pointer;" onClick="location.href='/starbucks-hompage/admin_notice_delete.jsp'">삭제</button>
+                	<button style="cursor: pointer;" onClick="javascript: moveUpdate(<%= rs.getInt("SEQ") %>)">수정</button>
+                	<button style="cursor: pointer;" onClick="">삭제</button>
                	</div>
 			</div>
 		<%

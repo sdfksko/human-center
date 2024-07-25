@@ -28,7 +28,7 @@
 		String selectSql = "DELETE FROM BOARD WHERE seq=?";
 		
 		pstmt = conn.prepareStatement(selectSql);
-		pstmt.setInt(1,)
+		
 		
 		pstmt.executeUpdate(); // sql insert 실행
 
