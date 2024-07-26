@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="./main.js"></script>
+    <script defer src="./js/sub.js"></script>
 </head>
 <body>
     <header>
@@ -668,7 +673,9 @@
                             <p class="date">개봉일 2024.07.11</p>
                         </div>
                         <div class="movie-util">
-                            <button></button>
+                            <button>
+                                
+                            </button>
                             <a href="">
                                 <div class="movie-ticketing">예매</div>
                             </a>
@@ -787,69 +794,61 @@
             <div class="show">
                 더보기
             </div>
-        </div>
-        <div class="footer-menu">
-            <ul>
-                <li>
-                    <a href="">회사소개</a>
-                </li>
-                <li>
-                    <a href="">인재채용</a>
-                </li>
-                <li>
-                    <a href="">사회공헌</a>
-                </li>
-                <li>
-                    <a href="">제휴/광고/부대사업문의</a>
-                </li>
-                <li>
-                    <a href="">이용약관</a>
-                </li>
-                <li>
-                    <a href="">위치기반서비스 이용약관</a>
-                </li>
-                <li>
-                    <a href="">개인정보처리방침</a>
-                </li>
-                <li>
-                    <a href="">윤리경영</a>
-                </li>
-            </ul>
-            <div class="movie-search">
-                <a href="">
+            <div onclick="sTo()" class="top">
+                <div class="top-show">
                     <div class="material-symbols-outlined">
-                        search
+                        arrow_drop_up
                     </div>
-                    <div class="search">
-                        영화찾기
+                    <div class="top-text">
+                        TOP
                     </div>
-                </a>
-            </div>
-            <div class="innerwrap">
-                <div class="logo">
-                    <img src="../images/megabox-images/megabox.logo.png" alt="">
-                </div>
-                <div class="text">
-                    <div>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어) ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr</div>
-                    <div>대표자명 홍정인 · 개인정보보호책임자 강병철 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2023-서울성동-0177</div>
-                    <div>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</div>
-                </div>
-                <div class="icon">
-                    <a href="">
-                        <img src="../images/megabox-images/icon1.png" alt="">
-                    </a>
-                    <a href="">
-                        <img src="../images/megabox-images/icon2.png" alt="">
-                    </a>
-                    <a href="">
-                        <img src="../images/megabox-images/icon3.png" alt="">
-                    </a>
-                    <a href="">
-                        <img src="../images/megabox-images/icon4.png" alt="">
-                    </a>
                 </div>
             </div>
         </div>
-    </header>
+        <div class="sub-menu">
+            <div class="sub-menu-container">
+                <h1>메가박스 극장 찾기</h1>
+                <div class="sub-menu-box">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="item"><a href="#">회사소개</a></div>
+                <div class="item"><a href="#">인재채용</a></div>
+                <div class="item"><a href="#">사회공헌</a></div>
+                <div class="item"><a href="#">제휴/광고/부대사업문의</a></div>
+                <div class="item"><a href="#">이용약관</a></div>
+                <div class="item"><a href="#">위치기반서비스 이용약관</a></div>
+                <div class="item"><a href="#">개인정보처리방침</a></div>
+                <div class="item"><a href="#">윤리경영</a></div>
+            </div>
+            <div class="movie-search">
+                <div class="material-symbols-outlined">
+                    search
+                </div>
+                <div onclick="showMenu()" class="search">
+                    극장찾기
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-img"><img src="https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png" alt=""></div>
+                <div class="footer-bottom-text">
+                    서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어) ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr <br>
+대표자명 홍정인 · 개인정보보호책임자 강병철 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2023-서울성동-0177 <br>
+COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved
+                </div>
+                <div class="footer-bottom-sns">
+                    <a href="#"><img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-youtubeN.png" alt=""></a>
+                    <a href="#"><img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-instagramN.png" alt=""></a>
+                    <a href="#"><img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-facebookN.png" alt=""></a>
+                    <a href="#"><img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-twitterN.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>    
 </body>
 </html>
