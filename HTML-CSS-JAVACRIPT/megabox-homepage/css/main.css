@@ -147,7 +147,7 @@ main .inner .movie-box{
 }
 
 main .inner .movie-box .movie{
-    width: 260px;
+    width: 240px;
     height: 500px;
     /* background-color: pink; */
     border-radius: 10px;
@@ -155,19 +155,19 @@ main .inner .movie-box .movie{
 }
 
 main .inner .movie-box .movie .movie-img{
-    width: 260px;
+    width: 240px;
     height: 350px;
     position: relative;
 }
 
 main .inner .movie-box .movie .movie-img img{
-    width: 260px;
+    width: 240px;
     height: 350px;
     border-radius: 10px;
 }
 
 main .inner .movie-box .movie .movie-img .img-shadow{
-    width: 260px;
+    width: 240px;
     height: 350px;
     position: absolute;
     top: 0;
@@ -271,6 +271,9 @@ main .inner .movie-box .movie .movie-information{
     display: flex;
 }
 
+main .inner .movie-box .movie .movie-information p{
+    font-size: 15px;
+}
 
 main .inner .movie-box .movie .movie-information .rate{
 
@@ -301,7 +304,7 @@ main .inner .movie-box .movie .movie-util button {
 }
 
 main .inner .movie-box .movie .movie-util a .movie-ticketing{
-    width: 190px;
+    width: 160px;
     height: 30px;
     background-color: blue;
     display: flex;
