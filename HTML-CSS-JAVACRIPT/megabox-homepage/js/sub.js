@@ -33,7 +33,19 @@ function sTo() {
 function showMenu() {
     const menuEl = document.querySelector('main .sub-menu');
 
-    function noneMenu(menuEl) {
-        display: none;
+    function Menu(element) {
+        element.style.display = 'block';
     }
+
+    Menu(menuEl);
+}
+
+function closeMenu() {
+    const menuEl = document.querySelector('main .sub-menu');
+
+    function quit(star) {
+        star.style.display = 'none';
+    }
+
+    quit(menuEl);
 }
