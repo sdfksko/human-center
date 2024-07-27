@@ -328,7 +328,11 @@ main .inner .show{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #f8f8fa;
+    border: 1px solid #f8f8f8;
+}
+
+main .inner .show:hover {
+    border: 1px solid black;
 }
 
 main .top {
@@ -367,8 +371,8 @@ main .sub-menu{
     width: 100%;
     background-color: #333;
     position: absolute;
-    bottom: 500px;
-    /* display: none; */
+    bottom: 1px;
+    display: none;
 }
 
 main .sub-menu .sub-menu-container {
@@ -379,7 +383,7 @@ main .sub-menu .sub-menu-container {
 
 main .sub-menu .sub-menu-container .top-bar {
     width: 100%;
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -407,4 +411,126 @@ main .sub-menu .sub-menu-container .close-menu .material-symbols-outlined {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main .sub-menu .sub-menu-container .bottom-bar {
+    width: 100%;
+    /* background-color: orange; */
+    border: 1px solid #999;
+    margin-bottom: 40px;
+}
+
+main .sub-menu .sub-menu-container .bottom-bar .area {
+    width: 95%;
+    margin: 0 auto;
+    /* background-color: green; */
+    display: flex;
+    margin-bottom: 20px;
+}
+
+main .sub-menu .sub-menu-container .bottom-bar .area:first-child {
+    margin-top: 40px;
+}
+
+main .sub-menu .sub-menu-container .bottom-bar .area:last-child {
+    margin-bottom: 40px;
+}
+
+main .sub-menu .sub-menu-container .bottom-bar .area .main-area {
+    width: 15%;
+    /* background-color: red; */
+}
+
+main .sub-menu .sub-menu-container .bottom-bar .area .main-area p {
+    color: #fff;
+}
+
+main .sub-menu .sub-menu-container .bottom-bar .area .sub-area {
+    width: 85%;
+    /* background-color: pink; */
+}
+
+main .sub-menu .sub-menu-container .bottom-bar .area .sub-area a {
+    display: inline-block;
+    margin: 0 24px 10px 0;
+    font-size: .9333em;
+    color:rgb(187,187,187);
+}
+
+main .sub-menu .sub-menu-container .bottom-bar .area .sub-area a:hover {
+    text-decoration: underline;
+    color: rgb(51, 158, 178);
+}
+
+main .home-menu {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(68, 68, 68);
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+main .home-menu .select-menu {
+    width: 500px;
+    height: 100%;
+    position: relative;
+    left: 400px;
+    display: flex;
+    align-items: center;
+}
+
+main .home-menu .select-menu .material-symbols-outlined {
+    color: gray;
+}
+
+main .home-menu .select-menu .select1 a {
+    display: flex;
+    align-items: center;
+}
+
+main .home-menu .select-menu .select1 a:hover p {
+    text-decoration: underline;
+}
+
+main .home-menu .select-menu .select1 .material-symbols-outlined {
+    position: relative;
+    top: 2px;
+}
+
+main .home-menu .select-menu .select2  a {
+    display: flex;
+    align-items: center;
+}
+
+main .home-menu .select-menu .select2  a:hover  p {
+    text-decoration: underline;
+}
+
+main .home-menu .select-menu .select2 .material-symbols-outlined {
+    position: relative;
+    top: 2px;
+}
+main .menu-top{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .12);
+    position: fixed;
+    top: 50px;
+    display: none;
+}
+
+main .menu-top .select-menu {
+    width: 500px;
+    height: 100%;
+    position: relative;
+    left: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .menu-top .select-menu a {
+    color: black;
 }

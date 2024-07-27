@@ -9,6 +9,28 @@ window.addEventListener('scroll', _.throttle(() => {
     }
 }, 200));
 
+const homeMenuEl = document.querySelector('main .home-menu');
+window.addEventListener('scroll', _.throttle(() => {
+    console.log('scrollY:', window.scrollY);
+
+    if (window.scrollY < 100) {
+        gsap.to(homeMenuEl, {duration: 0, opacity: 0, display: 'none'});
+    } else {
+        gsap.to(homeMenuEl, {duration: 0, opacity: 1, display: 'block'});
+    }
+}));
+
+const menuTopEl = document.querySelector('main .menu-top');
+window.addEventListener('scroll', _.throttle(() => {
+    console.log('scrollY:', window.scrollY);
+
+    if (window.scrollY < 260) {
+        gsap.to(menuTopEl, {duration: 0, opacity: 0, display: 'none'});
+    } else {
+        gsap.to(menuTopEl, {duration: 0, opacity: 1, display: 'block'});
+    }
+}));
+
 function sTo() {
     const startY = window.scrollY;
     const endY = 0;
@@ -38,6 +60,8 @@ function showMenu() {
     }
 
     Menu(menuEl);
+
+    window.scrollBy(0, -500);
 }
 
 function closeMenu() {
@@ -48,4 +72,6 @@ function closeMenu() {
     }
 
     quit(menuEl);
+
+    window.scrollTo(0, document.body.scrollHeight);
 }

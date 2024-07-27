@@ -137,7 +137,6 @@ footer{
     width: 100%;
     height: 200px;
     background-color: #f1ebeb;
-    
 }
 .footer-container{
     position: relative;
@@ -161,6 +160,28 @@ footer .footer-top{
 .footer-top .item:nth-child(7){
     font-weight: bold;
 }
+footer .movie-search{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #999;
+    border-radius: 25px;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
+footer .movie-search .material-symbols-outlined {
+    color: #999;
+}
+
+footer .movie-search .search3 {
+    color: #999;
+}
+
 .footer-bottom{
     position: absolute;
     top:100px;
@@ -246,7 +267,8 @@ footer .wrapper{
     color:rgb(187,187,187);
 }
 .menu-main .item li a:hover{
-    color: rgb(58, 158, 178);
+    color: rgb(51, 158, 178);
+    text-decoration: underline;
 }
 .search-container{
     position: absolute;
@@ -288,9 +310,6 @@ footer .wrapper{
 }
 .search-container .top-rank,a{
     color:white;
-}
-a:hover{
-    text-decoration: underline;
 }
 .search-container .top-rank .item{
     padding-bottom: 15px;
