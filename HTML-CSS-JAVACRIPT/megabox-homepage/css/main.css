@@ -339,7 +339,7 @@ main .top .top-show {
     width: 50px;
     height: 50px;
     position: fixed;
-    right: 340px;
+    right: 0px;
     bottom: 225px;
     background-color: #333;
     display: flex;
@@ -361,101 +361,6 @@ main .inner .top .top-text {
     font-size: 15px;
     position: relative;
     bottom: 8px;
-}
-
-main .sub-menu{
-    width: 100%;
-    background-color: #333;
-    position: absolute;
-    bottom: 1px;
-    display: none;
-}
-
-main .sub-menu .sub-menu-container {
-    width: 1100px;
-    margin: 0 auto;
-    position: relative;
-}
-
-main .sub-menu .sub-menu-container .top-bar {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-main .sub-menu .sub-menu-container h1 {
-    font-size: 27px;
-    color: #fff;
-}
-
-main .sub-menu .sub-menu-container .close {
-   cursor: pointer;
-}
-
-main .sub-menu .sub-menu-container .close .close-menu {
-
-}
-
-main .sub-menu .sub-menu-container .close-menu .material-symbols-outlined {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: gray;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .sub-menu .sub-menu-container .bottom-bar {
-    width: 100%;
-    /* background-color: orange; */
-    border: 1px solid #999;
-    margin-bottom: 40px;
-}
-
-main .sub-menu .sub-menu-container .bottom-bar .area {
-    width: 95%;
-    margin: 0 auto;
-    /* background-color: green; */
-    display: flex;
-    margin-bottom: 20px;
-}
-
-main .sub-menu .sub-menu-container .bottom-bar .area:first-child {
-    margin-top: 40px;
-}
-
-main .sub-menu .sub-menu-container .bottom-bar .area:last-child {
-    margin-bottom: 40px;
-}
-
-main .sub-menu .sub-menu-container .bottom-bar .area .main-area {
-    width: 15%;
-    /* background-color: red; */
-}
-
-main .sub-menu .sub-menu-container .bottom-bar .area .main-area p {
-    color: #fff;
-}
-
-main .sub-menu .sub-menu-container .bottom-bar .area .sub-area {
-    width: 85%;
-    /* background-color: pink; */
-}
-
-main .sub-menu .sub-menu-container .bottom-bar .area .sub-area a {
-    display: inline-block;
-    margin: 0 24px 10px 0;
-    font-size: .9333em;
-    color:rgb(187,187,187);
-}
-
-main .sub-menu .sub-menu-container .bottom-bar .area .sub-area a:hover {
-    text-decoration: underline;
-    color: rgb(51, 158, 178);
 }
 
 main .home-menu {

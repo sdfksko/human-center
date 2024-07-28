@@ -53,7 +53,7 @@ function sTo() {
 }
 
 function showMenu() {
-    const menuEl = document.querySelector('main .sub-menu');
+    const menuEl = document.querySelector('footer .sub-menu');
 
     function Menu(element) {
         element.style.display = 'block';
@@ -65,7 +65,7 @@ function showMenu() {
 }
 
 function closeMenu() {
-    const menuEl = document.querySelector('main .sub-menu');
+    const menuEl = document.querySelector('footer .sub-menu');
 
     function quit(star) {
         star.style.display = 'none';
