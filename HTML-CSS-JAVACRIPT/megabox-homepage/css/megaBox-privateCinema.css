@@ -19,7 +19,7 @@ main .container {
 }
 
 main .container .container-box {
-    width: 90%;
+    width: 1140px;
     height: 100%;
     margin: 0 auto;
     position: relative;
