@@ -183,6 +183,7 @@ main .inner .movie-box .movie .movie-img .img-shadow{
     border-radius: 10px;
 }
 
+
 main .inner .movie-box .movie .movie-img:hover .img-shadow{
     display: block;
 }
