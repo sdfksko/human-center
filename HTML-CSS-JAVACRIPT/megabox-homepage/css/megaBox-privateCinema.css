@@ -259,11 +259,12 @@ main .home-menu {
 }
 
 main .home-menu .select-menu {
-    width: 500px;
+    width: 1180px;
     height: 100%;
     position: relative;
-    left: 85px;
+    left: 400px;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
