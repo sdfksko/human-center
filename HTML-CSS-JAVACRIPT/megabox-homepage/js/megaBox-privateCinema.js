@@ -2,7 +2,7 @@ const topEl = document.querySelector('main .top');
 window.addEventListener('scroll', _.throttle(() => {
     console.log('scrollY:', window.scrollY);
 
-    if (window.scrollY < 300) {
+    if (window.scrollY < 100) {
         gsap.to(topEl, .5, {opacity: 0, display: 'none'});
     } else {
         gsap.to(topEl, .5, {opacity: 1, display: 'block'});

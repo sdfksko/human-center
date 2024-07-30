@@ -182,7 +182,7 @@ main .container .container-box .imagebox:nth-child(6) a .imagebox-shadow {
 
 main .container .container-box .imagebox:nth-child(7) a .imagebox-shadow {
     bottom: 318px;
-    background-color: rgba(76, 45, 31, 0.87);
+    background-color: rgb(55, 53, 106);
 }
 
 main .container .container-box .imagebox:nth-child(8) a .imagebox-shadow {
@@ -207,10 +207,97 @@ main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-tex
 
 main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text h1 {
     font-size: 30px;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text > h1 {
+    font-size: 30px;
+    padding-bottom: 13px;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text p {
 
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .comfortText {
+    width: 150px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 50% 50%;
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .comfortText h1 {
+    color: rgb(57, 34, 58);
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text img {
+    width: 250px;
+
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .meaga4DText {
+    width: 190px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .meaga4DText .meaga4DText1 {
+    width: 95px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .meaga4DText .meaga4DText1 h1 {
+    font-size: 25px;
+    color: rgb(5, 2, 132);
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .meaga4DText .meaga4DText2 {
+    width: 90px;
+    height: 55px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .meaga4DText .meaga4DText2 h1 {
+    font-size: 25px;
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .kids {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .kids .kids-item {
+    width: 25px;
+    height: 40px;
+    background-color: #fff;
+    margin: 0px 2px 4px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .container-box .imagebox a .imagebox-shadow .imagebox-shadow-text .text .kids .kids-item h1 {
+    color: orange;
+    font-size: 20px;
 }
 
 main .container .container-box .imagebox a .arrow {
