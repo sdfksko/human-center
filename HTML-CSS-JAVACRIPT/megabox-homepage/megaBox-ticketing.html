@@ -291,45 +291,47 @@
         <div class="box">
             <h1>빠른예매</h1>
             <div class="ticketing-container">
-                <div class="swiper-container">
+                <div class="ticketing-select">
                     <div class="swiper-prev">
                         <div class="material-symbols-outlined">
                             arrow_back_ios
                         </div>
                     </div>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <p>1</p>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p>1</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>2</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>3</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>4</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>5</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>6</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>7</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>8</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>9</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>10</p>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <p>2</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>3</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>4</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>5</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>6</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>7</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>8</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>9</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>10</p>
-                        </div>
+                        <!-- <div class="swiper-pagination"></div> -->
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
                     <div class="swiper-next">
                         <div class="material-symbols-outlined">
                             arrow_forward_ios
@@ -337,17 +339,17 @@
                     </div>
                     <div class="date-image">
                         <img src="https://img.megabox.co.kr/static/pc/images/common/ico/ico-calendar-w20.png" alt="">
-                    </div>
+                    </div>    
                 </div>
                 <div class="menu">
                     <div class="movie-menu">
                         <h1>영화</h1>
                         <div class="movie-sub-menu">
                             <div class="sub-top-menu">
-                                <div class="top-first-menu">
+                                <div onclick="firstShow()" class="top-first-menu">
                                     <p>전체</p>
                                 </div>
-                                <div class="top-second-menu">
+                                <div onclick="secondShow()" class="top-second-menu">
                                     <p>큐레이션</p>
                                 </div>
                             </div>
