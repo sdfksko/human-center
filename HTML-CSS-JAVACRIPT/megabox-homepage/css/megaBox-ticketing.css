@@ -598,6 +598,7 @@ main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .t
     height: 80px;
     display: flex;
     border-bottom: 1px solid rgb(216, 217, 219);
+    cursor: pointer;
 }
 
 main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .time {
@@ -645,11 +646,12 @@ main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .t
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    margin-right: 10px;
 }
 
 main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .area p {
     padding-bottom: 10px;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .area p:last-child {
