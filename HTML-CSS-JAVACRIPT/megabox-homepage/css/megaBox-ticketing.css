@@ -609,6 +609,10 @@ main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .t
     align-items: center;
 }
 
+main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .time p {
+    font-size: 15px;
+}
+
 main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .time p:first-child {
     padding-bottom: 10px;
 }
@@ -625,6 +629,11 @@ main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .t
     justify-content: center;
     align-items: flex-start;
 }
+
+main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .info p {
+    font-size: 15px;
+}
+
 main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .info p:first-child {
     padding-bottom: 10px;
 }
@@ -634,12 +643,13 @@ main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .t
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-end;
 }
 
 main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .area p {
     padding-bottom: 10px;
+    font-size: 15px;
 }
 
 main .box .ticketing-container .menu .time-menu .time-menu-bottom .movie-time .time-show .area p:last-child {
