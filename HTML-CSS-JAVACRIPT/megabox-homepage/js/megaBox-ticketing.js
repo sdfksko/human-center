@@ -418,5 +418,9 @@ document.querySelectorAll('.theater-menu .sub-middle-menu .second-menu-item').fo
             el.style.borderColor = '';
         });
         item.style.backgroundColor = 'rgb(102, 102, 102)';
+        const timeEl = document.querySelector('.time-menu .bottom-main')
+        timeEl.style.display = 'none'
+        const movieEl = document.querySelector('.time-menu .movie-time')
+        movieEl.style.display = 'block'
     });
 });
