@@ -362,19 +362,18 @@ const alertElement = document.querySelector('.alert-message'); // 표시할 요�
 document.querySelectorAll('.movie-menu .sub-middle-menu .first-menu-item').forEach(item => {
     item.addEventListener('click', function() {
         if (selectedItems.has(item)) {
-            // 이미 선택된 항목을 클릭하면 선택 해제
             selectedItems.delete(item);
             item.style.backgroundColor = '';
             item.style.borderWidth = '';
             item.style.borderStyle = '';
             item.style.borderColor = '';
         } else {
-            // 선택된 항목이 최대 수 미만일 때만 추가 선택 가능
+            
             if (selectedItems.size < maxSelection) {
                 selectedItems.add(item);
                 item.style.backgroundColor = 'rgb(102, 102, 102)';
             } else {
-                // 최대 선택 가능 항목 수를 초과하려고 할 때
+                
                 alertElement.style.display = 'block';
             }
         }
@@ -386,19 +385,16 @@ const alert2Element = document.querySelector('.alert-message'); // 표시할 요
 document.querySelectorAll('.movie-menu .sub-middle-menu .second-menu-item').forEach(item => {
     item.addEventListener('click', function() {
         if (selectedItems.has(item)) {
-            // 이미 선택된 항목을 클릭하면 선택 해제
             selectedItems.delete(item);
             item.style.backgroundColor = '';
             item.style.borderWidth = '';
             item.style.borderStyle = '';
             item.style.borderColor = '';
         } else {
-            // 선택된 항목이 최대 수 미만일 때만 추가 선택 가능
             if (selectedItems.size < maxSelection) {
                 selectedItems.add(item);
                 item.style.backgroundColor = 'rgb(102, 102, 102)';
             } else {
-                // 최대 선택 가능 항목 수를 초과하려고 할 때
                 alert2Element.style.display = 'block';
             }
         }
@@ -425,19 +421,16 @@ const alert3Element = document.querySelector('.alert-message'); // 표시할 요
 document.querySelectorAll('.theater-menu .sub-middle-menu .second-menu-item').forEach(item => {
     item.addEventListener('click', function() {
         if (selectedItems.has(item)) {
-            // 이미 선택된 항목을 클릭하면 선택 해제
             selectedItems.delete(item);
             item.style.backgroundColor = '';
             item.style.borderWidth = '';
             item.style.borderStyle = '';
             item.style.borderColor = '';
         } else {
-            // 선택된 항목이 최대 수 미만일 때만 추가 선택 가능
             if (selectedItems.size < maxSelection) {
                 selectedItems.add(item);
                 item.style.backgroundColor = 'rgb(102, 102, 102)';
             } else {
-                // 최대 선택 가능 항목 수를 초과하려고 할 때
                 alert3Element.style.display = 'block';
             }
         }
@@ -453,19 +446,16 @@ const alert4Element = document.querySelector('.alert-message'); // 표시할 요
 document.querySelectorAll('.theater-menu .sub-middleSecond-menu .second-menu-item').forEach(item => {
     item.addEventListener('click', function() {
         if (selectedItems.has(item)) {
-            // 이미 선택된 항목을 클릭하면 선택 해제
             selectedItems.delete(item);
             item.style.backgroundColor = '';
             item.style.borderWidth = '';
             item.style.borderStyle = '';
             item.style.borderColor = '';
         } else {
-            // 선택된 항목이 최대 수 미만일 때만 추가 선택 가능
             if (selectedItems.size < maxSelection) {
                 selectedItems.add(item);
                 item.style.backgroundColor = 'rgb(102, 102, 102)';
             } else {
-                // 최대 선택 가능 항목 수를 초과하려고 할 때
                 alert4Element.style.display = 'block';
             }
         }
