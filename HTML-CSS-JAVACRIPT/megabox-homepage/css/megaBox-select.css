@@ -801,6 +801,173 @@ main .sub-pop .pop-up .bottom .check p {
     color: #fff;
 }
 
+main .seat-pop {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    z-index: 1;
+    display: none;
+}
+
+main .seat-pop .pop-up {
+    width: 300px;
+    height: 150px;
+}
+
+main .seat-pop .pop-up .top {
+    width: 300px;
+    height: 50px;
+    background-color: rgb(80, 51, 150);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .seat-pop .pop-up .top p {
+    position: relative;
+    right: 40px;
+    color: #fff;
+}
+
+main .seat-pop .pop-up .top .material-symbols-outlined {
+    position: relative;
+    left: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+main .seat-pop .pop-up .bottom {
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    position: relative;
+}
+
+main .seat-pop .pop-up .bottom > p {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 15px;
+}
+
+main .seat-pop .pop-up .bottom .check {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(80, 51, 150);
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+main .seat-pop .pop-up .bottom .check p {
+    color: #fff;
+}
+
+
+main .cancel-pop {
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    top: 400px;
+    left: 450px;
+    z-index: 1;
+    display: none;
+}
+
+main .cancel-pop .pop-up {
+    width: 300px;
+    height: 150px;
+}
+
+main .cancel-pop .pop-up .top {
+    width: 400px;
+    height: 50px;
+    background-color: rgb(80, 51, 150);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .cancel-pop .pop-up .top p {
+    position: relative;
+    right: 60px;
+    color: #fff;
+}
+
+main .cancel-pop .pop-up .top .material-symbols-outlined {
+    position: relative;
+    left: 70px;
+    color: #fff;
+    cursor: pointer;
+}
+
+main .cancel-pop .pop-up .bottom {
+    width: 400px;
+    height: 100px;
+    background-color: #fff;
+    position: relative;
+}
+
+main .cancel-pop .pop-up .bottom > p {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 14px;
+}
+
+main .cancel-pop .pop-up .bottom .cancel {
+    width: 60px;
+    height: 40px;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    left: 130px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(80, 51, 150);
+    border-radius: 5px;
+}
+
+main .cancel-pop .pop-up .bottom .cancel:hover {
+    background-color: rgb(242, 244, 248);
+}
+
+main .cancel-pop .pop-up .bottom .check {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(80, 51, 150);
+    position: absolute;
+    top: 40px;
+    right: 130px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+main .cancel-pop .pop-up .bottom .check:hover {
+    background-color: rgb(53, 31, 103);
+}
+
+main .cancel-pop .pop-up .bottom .check p {
+    color: #fff;
+}
+
+
+
+
+
+
 main .home-menu {
     width: 100%;
     height: 50px;
