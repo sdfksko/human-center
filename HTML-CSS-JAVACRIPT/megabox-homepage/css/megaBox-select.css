@@ -1,7 +1,13 @@
+#selected {
+    background-color: rgb(80, 51, 150);
+    color: white;
+}
+
 main {
-    width: 1250px;
+    width: 100%;
     height: 900px;
     position: relative;
+    margin: 0 auto;
 }
 
 main .container {
@@ -610,17 +616,28 @@ main .container .info .select-menu .select-seat .seat-menu .seat-item p {
     align-items: center;
 }
 
-main .container .info .people-type {
-    width: 300px;
-    height: 50px;
-    margin: 15px auto 0;
+main .container .info .people-menu {
+    height: 70px;
+    position: relative;
     display: flex;
-    justify-content: flex-start;
+    left: 20px;
     align-items: center;
 }
 
-main .container .info .people-type p {
+main .container .info .people-menu .people-type {
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20px;
+    display: none;
+}
+
+main .container .info .people-menu .people-type p {
+    height: 50px;
     color: rgb(196, 196, 196);
+    display: flex;
+    align-items: center;
 }
 
 main .container .info .payment-money {
@@ -724,7 +741,7 @@ main .container .select-people .bottom-menu .screen p {
 
 
 main .select-pop-up {
-    width: 1263px;
+    width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
@@ -736,8 +753,9 @@ main .sub-pop {
     width: 300px;
     height: 150px;
     position: absolute;
-    top: 400px;
-    left: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     display: none;
 }
@@ -805,8 +823,9 @@ main .seat-pop {
     width: 300px;
     height: 150px;
     position: absolute;
-    top: 400px;
-    left: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     display: none;
 }
@@ -875,8 +894,9 @@ main .cancel-pop {
     width: 400px;
     height: 150px;
     position: absolute;
-    top: 400px;
-    left: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     display: none;
 }
@@ -962,6 +982,78 @@ main .cancel-pop .pop-up .bottom .check:hover {
 main .cancel-pop .pop-up .bottom .check p {
     color: #fff;
 }
+
+
+main .complete-pop {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: none;
+}
+
+main .complete-pop .pop-up {
+    width: 300px;
+    height: 150px;
+}
+
+main .complete-pop .pop-up .top {
+    width: 300px;
+    height: 50px;
+    background-color: rgb(80, 51, 150);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .complete-pop .pop-up .top p {
+    position: relative;
+    right: 40px;
+    color: #fff;
+}
+
+main .complete-pop .pop-up .top .material-symbols-outlined {
+    position: relative;
+    left: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+main .complete-pop .pop-up .bottom {
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    position: relative;
+}
+
+main .complete-pop .pop-up .bottom > p {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 15px;
+}
+
+main .complete-pop .pop-up .bottom .check {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(80, 51, 150);
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+main .complete-pop .pop-up .bottom .check p {
+    color: #fff;
+}
+
 
 
 
