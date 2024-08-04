@@ -257,7 +257,7 @@ const peopleTypeEls = document.querySelectorAll('.people-menu .people-type');
 
 // 사람 유형 텍스트 업데이트 함수
 function updatePeopleTypeText() {
-    peopleTypeEls.forEach((el, index) => {
+    peopleTypeEls.forEach(function(el, index) {
         const type = Object.keys(counts)[index];
         const count = counts[type];
         const textEl = el.querySelector('p');
@@ -268,7 +268,7 @@ function updatePeopleTypeText() {
             el.style.display = 'none'; // 값이 없을 때 숨김
         }
     });
-};
+}
 
 // function updateSeatItems() {
 //     // 모든 seat-item을 초기화
