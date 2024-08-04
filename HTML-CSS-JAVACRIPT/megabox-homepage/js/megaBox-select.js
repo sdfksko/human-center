@@ -27,6 +27,7 @@ const numberEl = document.querySelector('.select-people .bottom-menu .top .item 
 const screenEl = document.querySelector('.select-people .bottom-menu .screen')
 const mainAreaEls = document.querySelectorAll('.seat-sub-area .area-number');
 
+// 인원 관련 함수
 addEl.addEventListener('click', function() {
     if(totalNumber == 8) {
         const selectPopEl = document.querySelector('main .select-pop-up');
@@ -240,7 +241,7 @@ subtractEl4.addEventListener('click', function() {
     screenEl.style.display = 'none';
     console.log("bestNumber: " + bestNumber);
 });
-
+//
 
 
 const areaNumbers = document.querySelectorAll('.select-people .bottom-menu .bottom .seat-sub-area .area-number');
@@ -357,6 +358,8 @@ const peopleTypes = {
     best: '우대'
 };
 
+
+// 좌석선택 관련 함수
 areaNumbers.forEach(function(areaNumberEl) {
     areaNumberEl.style.backgroundColor = '#333';
 
@@ -435,6 +438,8 @@ areaNumbers.forEach(function(areaNumberEl) {
     });
 });
 
+
+//팝업창 관련 함수 
 function closeSubPop() {
     const selectPopEl = document.querySelector('main .select-pop-up');
     const subPopEl = document.querySelector('main .sub-pop');
@@ -464,6 +469,8 @@ function closeCompletePop() {
     selectPopEl.style.display = 'none';
     completePopEl.style.display = 'none';
 };
+//
+
 
 function reset() {
     location.reload();
