@@ -315,10 +315,10 @@
                     <div class="discount-select-menu">
                         <div class="select-main">
                             <div class="first-main">
-                                <p>쿠폰/관람권/기타</p>
+                                <p onclick="firstShow()">쿠폰/관람권/기타</p>
                             </div>
                             <div class="second-main">
-                                <p>포인트</p>
+                                <p onclick="secondShow()">포인트</p>
                             </div>
                         </div>
                         <div class="select-sub">
@@ -408,63 +408,113 @@
                                 </div>
                             </div>
                             <div class="settlement-method">
-                                <div class="set-item">
+                                <div onclick="cardPay()" class="set-item">
                                     <p>신용/체크카드</p>
                                 </div>
-                                <div class="set-item">
-                                    <p>헤택</p>
+                                <div onclick="easyPay()" class="set-item">
                                     <p>간편결제</p>
                                 </div>
-                                <div class="set-item">
+                                <div onclick="phonePay()" class="set-item">
                                     <p>휴대폰결제</p>
                                 </div>
-                                <div class="set-item">
+                                <div onclick="bankPay()" class="set-item">
                                     <p>내통장결제</p>
                                 </div>
                             </div>
-                            <div class="card-select">
-                                <p>카드사 선택</p>
-                                <select name="" id="">
-                                    <option value="">선택</option>
-                                    <option value="">비씨카드</option>
-                                    <option value="">국민카드</option>
-                                    <option value="">신한카드</option>
-                                    <option value="">삼성카드</option>
-                                    <option value="">롯데카드</option>
-                                    <option value="">농협카드</option>
-                                    <option value="">하나카드</option>
-                                    <option value="">현대카드</option>
-                                    <option value="">씨티카드</option>
-                                    <option value="">제주카드</option>
-                                    <option value="">우리카드</option>
-                                    <option value="">수협카드</option>
-                                    <option value="">전북카드</option>
-                                    <option value="">광주카드</option>
-                                    <option value="">신협카드</option>
-                                    <option value="">카카오뱅크</option>
-                                    <option value="">케이뱅크</option>
-                                    <option value="">우체국카드</option>
-                                    <option value="">토스카드</option>
-                                    <option value="">SC제일은행 비씨카드</option>
-                                    <option value="">SC제일은행 삼성카드</option>
-                                    <option value="">IBK기업은행 카드</option>
-                                </select>
-                                <label>
-                                    <input type="radio" name="payment" value="ISP" checked>
-                                    ISP
-                                </label>
-                                <label>
-                                    <input type="radio" name="payment" value="일반결제">
-                                    일반결제
-                                </label>
+                            <div class="bottom-menu">
+                                <div class="card-select">
+                                    <p>카드사 선택</p>
+                                    <select name="" id="">
+                                        <option value="">선택</option>
+                                        <option value="">비씨카드</option>
+                                        <option value="">국민카드</option>
+                                        <option value="">신한카드</option>
+                                        <option value="">삼성카드</option>
+                                        <option value="">롯데카드</option>
+                                        <option value="">농협카드</option>
+                                        <option value="">하나카드</option>
+                                        <option value="">현대카드</option>
+                                        <option value="">씨티카드</option>
+                                        <option value="">제주카드</option>
+                                        <option value="">우리카드</option>
+                                        <option value="">수협카드</option>
+                                        <option value="">전북카드</option>
+                                        <option value="">광주카드</option>
+                                        <option value="">신협카드</option>
+                                        <option value="">카카오뱅크</option>
+                                        <option value="">케이뱅크</option>
+                                        <option value="">우체국카드</option>
+                                        <option value="">토스카드</option>
+                                        <option value="">SC제일은행 비씨카드</option>
+                                        <option value="">SC제일은행 삼성카드</option>
+                                        <option value="">IBK기업은행 카드</option>
+                                    </select>
+                                    <label>
+                                        <input type="radio" name="payment" value="ISP" checked>
+                                        ISP
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="payment" value="일반결제">
+                                        일반결제
+                                    </label>
+                                </div>
+                                <div class="easy-select">
+                                    <label>
+                                        <input type="radio" name="payment" value="네이버페이" checked>
+                                        네이버페이
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="payment" value="카카오페이">
+                                        카카오페이
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="payment" value="페이코" checked>
+                                        페이코
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="payment" value="KB-PAY">
+                                        KB PAY
+                                    </label>
+                                </div>
+                                <div class="phone-select">
+                                    <p>&bullet;결제하신 금액은 익월 휴대폰 요금에 합산되어 청구되며, 휴대폰 결제한도는 통산사별 월 누적 이용 제한에 따라 적용됩니다.</p>
+                                    <p>&bullet;매월 말일 23시30분 ~ 익월 00시 10분까지(40분간)는 시스템 점검시간으로 이용이 어려울 수 있습니다.</p>
+                                    <p>&bullet;휴대폰 결제와 관련된 추가 안내는 FAQ를 참조해주세요.</p>
+                                </div>
+                                <div class="bank-select">
+                                    <p>&bullet;내통장결제는 본인명의의 계좌를 최초 1회 등록 후 비밀번호 입력만으로 가편하게 이용할 수 있는 현금결제 서비스 입니다.</p>
+                                    <p>&bullet;은행 점검시간의 경우 내통장결제서비스 이용이 불가합니다.</p>
+                                </div>
+                                <div class="pop-up">
+                                    <h1>결제 프로모션</h1>
+                                    <img src="https://img.megabox.co.kr/SharedImg/payPromt/2024/08/01/2JDSeyX2akPAxnrVQ5la7si7t4ESsESX.png" alt="pay">
+                                    <p>네이버페이 1만원 이상 결제 시 500원 적립!</p>
+                                    <img src="https://img.megabox.co.kr/SharedImg/payPromt/2024/07/05/z9Amz4ohMGa2jOgT6zJZtcchh0qcWAr6.png" alt="toss">
+                                    <p>토스페이 첫 결제 시 2천원 토스포인트 적립</p>
+                                </div>
+                                <div class="agreement">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="payment" value="agree">
+                                        결제대행 서비스 약관 필수 동의
+                                    </label>
+                                    <div class="first-content">
+                                        <p>전자금융거래 기본약관</p>
+                                        <p>내용보기</p>
+                                    </div>
+                                    <div class="second-content">
+                                        <p>개인정보 수집 및 이용에 대한 동의</p>
+                                        <p>내용보기</p>
+                                    </div>
+                                    <div class="third-content">
+                                        <p>개인정보의 제 3자 제공 동의</p>
+                                        <p>내용보기</p>
+                                    </div>
+                                    <div class="fourth-content">
+                                        <p>개인정보의 처리 위탁 동의</p>
+                                        <p>내용보기</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pop-up">
-                            <h1>결제 프로모션</h1>
-                            <img src="https://img.megabox.co.kr/SharedImg/payPromt/2024/08/01/2JDSeyX2akPAxnrVQ5la7si7t4ESsESX.png" alt="pay">
-                            <p>네이버페이 1만원 이상 결제 시 500원 적립!</p>
-                            <img src="https://img.megabox.co.kr/SharedImg/payPromt/2024/07/05/z9Amz4ohMGa2jOgT6zJZtcchh0qcWAr6.png" alt="toss">
-                            <p>토스페이 첫 결제 시 2천원 토스포인트 적립</p>
                         </div>
                     </div>
                 </div>
@@ -519,7 +569,7 @@
                         <a href="#">이전</a>
                     </div>
                     <div class="next">
-                        <a href="#">결제</a>
+                        <a onclick="payComplete()" href="./megaBox-allMovie.html">결제</a>
                     </div>
                 </div>
             </div>
