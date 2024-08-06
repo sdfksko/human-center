@@ -1,6 +1,5 @@
 const homeMenuEl = document.querySelector('main .home-menu');
 window.addEventListener('scroll', _.throttle(() => {
-    console.log('scrollY:', window.scrollY);
 
     if (window.scrollY < 100) {
         gsap.to(homeMenuEl, {duration: 0, opacity: 0, display: 'none'});
@@ -323,7 +322,8 @@ function disableNextButton() {
 
 // 다음 페이지로 이동하는 함수
 function goToNextPage() {
-    window.location.href = '#';
+    window.location.href = '../megaBox-pay.html';
+    
 };
 
 // 좌석이 선택될 때마다 버튼 상태를 업데이트하는 함수
