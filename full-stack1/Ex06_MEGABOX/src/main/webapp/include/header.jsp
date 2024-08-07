@@ -1,5 +1,9 @@
+<%@page import="com.example.demo.service.MovieServiceImpl"%>
+<%@page import="com.example.demo.dto.MovieDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri = "jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +16,81 @@
  <link rel="icon" href="https://www.megabox.co.kr/static/pc/images/favicon.ico">
  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+ <script type="text/javascript" src="${pageContext.request.contextPath }/webjars/axios/1.7.2/dist/axios.min.js"></script>
  <link rel="stylesheet" href="${pageContext.request.contextPath }/static/css/header.css">
  <script defer src="${pageContext.request.contextPath }/static/js/header.js"></script>
 <title>영화별 상영시간표</title>
 </head>
 <body>
+<%
+	List<MovieDTO> movie = MovieServiceImpl.getInstance().select();
+	pageContext.setAttribute("movie", movie);
+%>
 <header>
+    <input type="hidden" id="session_name" value="${sessionScope.name }" />
+    <c:if test="${sessionScope.name!=null }">
+        <div class="login-container">
+            <div class="login-inner">
+                <div class="box">
+                    <div class="mbimg"><img src="https://img.megabox.co.kr/static/pc/images/2023/01/member_WELCOME_2.png" alt="WELCOME"></div>
+                    <div class="name">${sessionScope.name}님</div>
+                    <a href="/mypage" class="linkBtn" title="나의  메가박스">나의  메가박스</a>
+                </div>
+                <div class="box">
+                    <div class="tit">
+                        <span>스페셜 멤버십</span>
+                    </div>
+                    <ul class="membership"><li class="txt">특별한 멤버십 혜택을 만나보세요!</li></ul>
+                </div>
+                <div class="box point">
+                    <div class="tit">
+                        <a class="linkA" href="/mypage/point-list" title="멤버십 포인트"><span>포인트</span></a>
+                    </div>
+                    <div class="count"><span class="text">0</span></div>
+                </div>
+                <div class="box coupon">
+                    <div class="tit">
+                        <a class="linkA" href="/mypage/discount-coupon" title="쿠폰"><span>쿠폰</span></a>
+                        <a class="linkA" href="/mypage/point-list" title="멤버십 포인트"></a>
+                    </div>
+
+                    <div title="쿠폰 수" class="count"><span class="text">1</span><span>장</span></div>
+                </div>
+                <div class="box movieTk">
+                    <div class="tit">
+                        <a class="linkA" href="/mypage/movie-coupon" title="관람권"><span>관람권</span></a>
+                        <a class="linkA" href="/mypage/point-list" title="멤버십 포인트"></a>
+                    </div>
+
+                    <div title="관람권 수" class="count"><span class="text">1</span><span>장</span></div>
+                </div>
+                <div class="box reserve">
+                    <div class="tit">
+                        <a class="linkA" href="/mypage/bookinglist" title="예매내역"><span>예매</span></a>
+                    </div>
+
+                    <div title="예매 수" class="count"><div class="txt">예매내역이 없어요!</div></div>
+                </div>
+                <div class="box buy">
+                    <div class="tit">
+                        <a class="linkA" href="/mypage/bookinglist?tab=02" title="구매내역"><span>구매</span></a>
+                    </div>
+
+                    <div class="count"><span class="text">1</span><span>건</span></div>
+                </div>
+            </div>
+        </div>
+    </c:if>
+     <c:if test="${sessionScope.name==null }">
+    <div class="logout-container">
+        <div class="login-inner">
+            <div class="wrap">
+                <div class="txt">영화를 사랑하는 당신을 위한 꼭 맞는 혜택까지 확인해 보세요!</div>
+                <div class='a-wrap'><a href="javascript:void(0)" id="moveLogin" title="로그인">로그인</a><a href="/join" class="link" title="혹시 아직 회원이 아니신가요?">혹시 아직 회원이 아니신가요?</a></div>
+            </div>
+        </div>
+    </div>
+    </c:if>
         <div class="container">
             <div class="left">
                 <div class="sup">
@@ -34,23 +107,23 @@
                         <li>
                             <div class="sup-content">영화</div>
                             <ul class="sup-list-content">
-                                <li><a href="#">전체영화</a></li>
+                                <li><a href="allMovie.jsp">전체영화</a></li>
                                 <li><a href="#">무비포스트</a></li>
                             </ul>
                         </li>
                         <li>
                             <div class="sup-content">예매</div>
                             <ul class="sup-list-content">
-                                <li><a href="#">빠른예매</a></li>
-                                <li><a href="#">상영시간표</a></li>
+                                <li><a href="../main/ticketing.jsp">빠른예매</a></li>
+                                <li><a href="../main/timetable.jsp">상영시간표</a></li>
                                 <li><a href="#">더 부티크 프라이빗 예매</a></li>
                             </ul>
                         </li>
                         <li>
                             <div class="sup-content">극장</div>
                             <ul class="sup-list-content">
-                                <li><a href="#">전체극장</a></li>
-                                <li><a href="#">특별관</a></li>
+                                <li><a href="../main/totalTheater.jsp">전체극장</a></li>
+                                <li><a href="../main/cinema.jsp">특별관</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -60,19 +133,20 @@
             <div class="right">
                 <div class="sup">
                     <ul class="sup-title">
-                        <li id="login"><a href="javascript:void(0)" >로그인</a></li>
+                        <c:if test="${sessionScope.name==null }"><li id="login"><a href="javascript:void(0)" >로그인</a></li></c:if>
+                        <c:if test="${sessionScope.name!=null }"><li id="logout"><a href="javascript:void(0)" >로그아웃</a></li></c:if>
                         <li><a href="#">회원가입</a></li>
-                        <li><a href="#">빠른예매</a></li>
+                        <li><a href="ticketing.jsp">빠른예매</a></li>
                     </ul>
                     <div class="login-background"></div>
                     <div class="login-box">
                         <div class="title">로그인 <img src="${pageContext.request.contextPath }/static/images/close.svg" id="closeLogin"></div>
                         <div class="login-body">
                             <div class="left">
-                                <input type="text" placeholder="아이디">
-                                <input type="password" placeholder="비밀번호">
+                                <input type="text" placeholder="아이디" id="id">
+                                <input type="password" placeholder="비밀번호" id="pw">
                                 <div><label><input type="checkbox" name="" id="chk"><span>아이디 저장</span></label></div>
-                                <button>로그인</button>
+                                <button onclick="login()">로그인</button>
                                 <div class="link">
                                     <div class="id-find">ID/PW 찾기</div>
                                     <div class="sign-up">회원가입</div>
@@ -111,7 +185,7 @@
                             </ul>
                         </li>
                         <li><img src="${pageContext.request.contextPath }/static/images/calendar.svg" onclick="location.href='${pageContext.request.contextPath}/main/timetable.jsp'" alt=""></li>
-                        <li><img src="${pageContext.request.contextPath }/static/images/user.svg" alt=""></li>
+                        <li><img src="${pageContext.request.contextPath }/static/images/user.svg" id="userLogin" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -134,13 +208,11 @@
                         })
                     </script>
                     <div class="sub">
-                        <div class="top-img"><img src="https://img.megabox.co.kr/SharedImg/2024/07/08/HAHzCSec2Il5sMd4kcfMonbhCiHbEu2f_316.jpg" alt=""></div>
+                        <div class="top-img"><img src="${movie[0].image }" alt="" onclick="location.href=`allMovieIdx.jsp?movieIdx=${movie[0].movieIdx}`"></div>
                         <div class="top-rank">
-                            <div class="item"><em>1</em><a href="#">데드풀과 울버린</a></div>
-                            <div class="item"><em>2</em><a href="#">파일럿</a></div>
-                            <div class="item"><em>3</em><a href="#">슈퍼배드</a></div>
-                            <div class="item"><em>4</em><a href="#">리볼버</a></div>
-                            <div class="item"><em>5</em><a href="#">명탐정 코난:100만 달러의 펜타그램</a></div>
+                        	<c:forEach  var="vo" items="${movie }" begin="0" end="4" step="1" varStatus="status">
+                            	<div class="item"><em>${status.index+1 }</em><a href="allMovieIdx.jsp?movieIdx=${vo.movieIdx }">${vo.name }</a></div>                            	
+                        	</c:forEach>
                         </div>
                     </div>
                 </div>
