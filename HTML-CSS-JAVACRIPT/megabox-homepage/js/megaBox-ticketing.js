@@ -532,22 +532,33 @@ document.querySelectorAll('.theater-menu .sub-middleSecond-menu .first-menu-item
 
 let theaterSecondMaxNumber = 0;
 
-document.querySelectorAll('.theater-menu .sub-middle-menu .second-menu-item').forEach(function(item){
+const timeMenuEl = document.querySelector('.time-menu-bottom .movie-time');
+const bottomMenuEl = document.querySelector('.time-menu-bottom .bottom-menu');
+
+document.querySelectorAll('.theater-menu .sub-middle-menu .second-menu-item').forEach(function(item) {
     item.addEventListener('click', function() {
         var computedStyle = getComputedStyle(item);
-        if(computedStyle.backgroundColor === 'rgb(51, 51, 51)') {
+        if (computedStyle.backgroundColor === 'rgb(51, 51, 51)') {
             item.classList.remove('selected');
             theaterSecondMaxNumber--;
+            console.log('theaterSecondMaxNumber after deselection: ' + theaterSecondMaxNumber);
             return;
         }
-        if(theaterSecondMaxNumber < 3) {
+        if (theaterSecondMaxNumber < 3) {
             item.classList.add('selected');
-            theaterSecondMaxNumber++
-            console.log('theaterSecondMaxNumber: ' + theaterSecondMaxNumber);
+            theaterSecondMaxNumber++;
+            console.log('theaterSecondMaxNumber after selection: ' + theaterSecondMaxNumber);
         } else {
             alert('최대개수를 선택하였습니다');
         }
-    })
+        if(theaterSecondMaxNumber == 0) {
+            timeMenuEl.style.display = 'none';
+            bottomMenuEl.style.display = 'block'
+        } else {
+            timeMenuEl.style.display = 'block';
+            bottomMenuEl.style.display = 'none'
+        }
+    });
 });
 
 document.querySelectorAll('.theater-menu .sub-middleSecond-menu .second-menu-item').forEach(function(item){
@@ -556,6 +567,7 @@ document.querySelectorAll('.theater-menu .sub-middleSecond-menu .second-menu-ite
         if(computedStyle.backgroundColor === 'rgb(51, 51, 51)') {
             item.classList.remove('selected');
             theaterSecondMaxNumber--;
+            console.log('theaterSecondMaxNumber after deselection: ' + theaterSecondMaxNumber);
             return;
         }
         if(theaterSecondMaxNumber < 3) {
@@ -564,6 +576,13 @@ document.querySelectorAll('.theater-menu .sub-middleSecond-menu .second-menu-ite
             console.log('theaterSecondMaxNumber: ' + theaterSecondMaxNumber);
         } else {
             alert('최대개수를 선택하였습니다');
+        }
+        if(theaterSecondMaxNumber == 0) {
+            timeMenuEl.style.display = 'none';
+            bottomMenuEl.style.display = 'block'
+        } else {
+            timeMenuEl.style.display = 'block';
+            bottomMenuEl.style.display = 'none'
         }
     })
 });
